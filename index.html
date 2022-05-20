@@ -15,17 +15,20 @@
 
 </head>
 <body>
+    <!-- Creation du cercle qui va suivre le curseur de la souris -->
+    <div class='cursor' id="cursor"></div>
+
     <!-- Création de la nav bar -->
     <nav class="navbar">
         <!-- Titre + Liens -->
         <div class="logo_liens_boutton">
-            <div class="logo">
+            <div class="logo hoverable">
                 <h1> DESSERTIAMO </h1>
             </div>
             <div class="links">
-                <a href="">ADRESSE / </a>
-                <a href="">CONTACT / </a>
-                <a href="">NOTRE HISTOIRE</a>
+                <a class="hoverable" href="">ADRESSE / </a>
+                <a class="hoverable" href="">CONTACT / </a>
+                <a class="hoverable" href="">NOTRE HISTOIRE</a>
             </div>
             
         </div>
@@ -33,9 +36,12 @@
         
         <!-- BOUTON-->
         <div class="div_boutton">
-            <button class="button" type="button" aria-label="clique !"></button>
+            <button class="button hoverable" type="button" aria-label="clique !"></button>
         </div>
         
-    </nav>    
+    </nav>
+    
+    
+    <script src="index.js"></script>
 </body>
 </html>

@@ -1,3 +1,23 @@
+/* STYLE POUR TOUTE LA PAGE */
+body{
+   height: 500px;
+}
+.cursor {
+    position: fixed;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    left: -100px;
+    top: 50%;
+    mix-blend-mode: difference;
+    background-color: black;
+    z-index: 10000;
+    border: 2px solid black;
+    opacity: 0.2;
+    height: 30px;
+    width: 30px;
+    transition: all 100ms;
+  }
 
 /* STYLE NAVBAR */
 
@@ -9,18 +29,29 @@
 }
 
 /*  STYLE POUR LOGO ET LIENS */
-.logo_liens_boutton{
-}
 .logo{
     font-family: 'Bad Script', cursive;
+    cursor: pointer;
+    transition: transform 0.2s ;
+    display: inline-block;
 }
+
+.logo:hover{
+    transform:  rotate(-3deg);
+}
+
 .links{
     font-family: 'Roboto Slab', serif;
 }
 a{
     text-decoration: none;
+    transition: font-weight 0.2s;
+    
 }
 
+a:hover{
+    font-weight: bold;
+}
 h1{
     margin: 0;
 }
@@ -31,13 +62,18 @@ h1{
     align-self: center;
 }
 
+.div_boutton p{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+}
 .button{
     font-family: 'Bad Script', cursive;
     height: 75px;
     width: 75px;
     border: 1px solid rgb(160, 160, 160);
     border-radius: 50%;
-    background:white;
+    background: linear-gradient(grey,10%, white);
     transition: 0.8s;
     position: relative;
     cursor: pointer;
@@ -45,9 +81,7 @@ h1{
 }
 
 .button:hover{
-    color:white;
-   
-   
+    color:white;     
 }
 
 
@@ -59,11 +93,14 @@ h1{
     z-index:2;
     left: 0;
     bottom: 0;
-    background: linear-gradient(grey,10%, white);
-    transition: 0.8s;
+    transition: 0.5s;
     border-radius: 50%;
+    border: white;
 }
 
 .button:hover::before{
     height: 100%;
 }
+
+
+
