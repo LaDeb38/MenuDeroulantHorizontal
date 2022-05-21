@@ -22,5 +22,4 @@ function onMouseHover() {
     cursor.style.height = "30px";
     cursor.style.width = "30px";
   }
-
     

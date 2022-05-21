@@ -1,6 +1,9 @@
 /* STYLE POUR TOUTE LA PAGE */
+html, body {
+    height : 100%; 
+}
 body{
-   height: 500px;
+    --slide-text-time:1.5s;
 }
 .cursor {
     position: fixed;
@@ -26,6 +29,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     margin: 1.5rem;
+    animation: slide-logo_links var(--slide-text-time) cubic-bezier(.23,1,.32,1) 
 }
 
 /*  STYLE POUR LOGO ET LIENS */
@@ -52,20 +56,14 @@ a{
 a:hover{
     font-weight: bold;
 }
-h1{
+.logo h1{
     margin: 0;
 }
 
-/* STYLE POUR LE BOUTTON */
+/* STYLE POUR LE BOUTON */
 
 .div_boutton{
     align-self: center;
-}
-
-.div_boutton p{
-    text-align: center;
-    font-family: 'Roboto Slab', serif;
-    margin: 0;
 }
 .button{
     font-family: 'Bad Script', cursive;
@@ -74,33 +72,62 @@ h1{
     border: 1px solid rgb(160, 160, 160);
     border-radius: 50%;
     background: linear-gradient(grey,10%, white);
-    transition: 0.8s;
+    transition: 0.2s;
     position: relative;
     cursor: pointer;
     overflow: hidden;
 }
 
+.div_boutton p{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+}
+
 .button:hover{
-    color:white;     
+    height:100px;
+    width:100px;
 }
 
+/* Style pour le main text */
 
-.button::before{
-    content:"";
-    position: absolute;
-    width: 100%;
-    height: 0%;
-    z-index:2;
-    left: 0;
-    bottom: 0;
-    transition: 0.5s;
-    border-radius: 50%;
-    border: white;
+.text{
+    width: 60%;
+    margin: auto;
+    margin-top: 10% ;
+    letter-spacing: 3px;
+    line-height: 275%;
+    font-family: 'Roboto Slab', serif;
+    
 }
 
-.button:hover::before{
-    height: 100%;
+.text h1{
+    animation: slide-text var(--slide-text-time) cubic-bezier(.23,1,.32,1) 50ms;
+    transform: scale(0);
+    animation-fill-mode: forwards;
 }
 
+/* Keyframes */
+@keyframes slide-text {
+    0% {
+       transform: translateY(1000%);
+       opacity:0; 
+    }
+    100% {
+        transform: translateY(0%);
+        opacity:1;
+    }
+}
+
+@keyframes slide-logo_links {
+    0% {
+        transform: translateY(1000%);
+        opacity:0; 
+     }
+     100% {
+         transform: translateY(0%);
+         opacity:1;
+     }
+}
 
 
